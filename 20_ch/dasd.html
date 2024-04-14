@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case-Insensitive Search Bar</title>
+</head>
+<body style="background-color: rgba(34, 33, 33, 0.795);">
+
+<input type="text" id="searchInput" placeholder="Search..." />
+
+<ul id="resultsList">
+  <!-- Results will be displayed here -->
+</ul>
+
+<script>
+
+document.getElementById('searchInput').addEventListener('input', function() {
+    var searchQuery = this.value.toLowerCase();
+    var predefinedString = "abcdefghijklmnopqrstuvwxyz";
+    var found = true;
+
+    // Check if each letter of the alphabet exists within the predefined string
+    for (var i = 0; i < searchQuery.length; i++) {
+        if (!predefinedString.includes(searchQuery[i])) {
+            found = false;
+            break;
+        }
+    }
+
+    // Display search result
+    var resultsList = document.getElementById('resultsList');
+    if (found) {
+        resultsList.innerHTML = "<li>True</li>";
+    } else {
+        resultsList.innerHTML = "<li>False</li>";
+    }
+});
+
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

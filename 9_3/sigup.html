@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class=" " style="background-color: rgb(41, 40, 40); color: white; display: flex ; flex-direction: column ; width: 20vw;">
+        
+        <form action="">
+
+            <input type="text" placeholder="Username" name="Username" id="username">
+            <input type="password" placeholder="password">
+            <input type="email" placeholder="example@example.com" id="email">
+            <input type="number " id="age" placeholder="Age">
+           <input type="submit" name="" id="btn">    
+        </form>
+    </div>
+    
+
+    <script>
+           let username   = document.querySelector("#username")
+           let password = document.querySelector("#password")
+           let email = document.querySelector("#email")
+           let age  = document.querySelector("#age")
+          let btn = document.querySelector("#btn")
+
+          
+          btn.addEventListener("click" , function(){
+            if(age.value.lenght < 7){
+                console.log("password is good");
+            }
+            else{
+                console.log("password is not good");
+            }
+            if()
+          })
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

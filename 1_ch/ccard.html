@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: ;
+background-color: rgb(37, 36, 36); color: white;">
+<div class="card">
+    <h1>item1 650$</h1>
+    <button 
+    onclick="item1()">shop</button>
+    <h1>item2  100$</h1>
+    <button
+    onclick="item2()">shop</button>
+    <h1>total value <span>0</span></h1>
+    <h2 class="show"></h2>
+</div>
+<div class="">
+    <h2>write table</h2>
+<button onclick="CreatTable()">
+Create  </button>
+</div>
+
+    <script>
+        let show  = document.querySelector(".show")
+  let toatlcost  = document.querySelector("h1 span").innerHTML
+        function item1(){
+            let number  = parseInt(toatlcost)
+        var total =number  + 640
+     console.log(total);    
+     let newtr = toatlcost =total
+console.log(newtr);
+show.innerHTML = newtr
+
+let showNum = parseInt(show)
+
+
+    }
+function item2 (){
+    let number = parseInt(toatlcost)
+    var add = number +100
+    console.log(add);
+    let total = toatlcost = add
+
+    show.innerHTML = total
+    
+    
+}
+
+
+// let tabel =3
+// function CreatTable(){
+//     for(let i = tabel ;i <11; i*tabel){
+//         console.log( "3 X " + i +" = " +i );
+//     }
+
+    </script>
+</body>
+</html>

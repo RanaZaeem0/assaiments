@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(39, 37, 37);">
+    <h1>Find the prencentage</h1>
+   
+    <h3>total number 
+        <input type="number" name="" id="totalNumber">
+    </h3>
+
+
+    <input  type="number" id="obtainNumber" placeholder="enter your marks">
+
+    <input class="btn" type="submit">
+
+    <p class="showPar" id="showpar">1231</p>
+
+    <P id="showGrate"> Grate <span></span></P>
+
+
+
+    <script>
+
+
+        
+        let btn  = document.querySelector(".btn")
+        let  shownumber = document.querySelector("#showpar")
+        console.log(shownumber.innerHTML);
+        btn.addEventListener("click",()=>{
+            console.log( findPersantage());
+            
+        })
+        function findPersantage(){
+            let showGrate = document.querySelector("#showGrate span")
+            let obtainNumber = document.querySelector("#obtainNumber")
+            let totalNumber = document.querySelector("#totalNumber").value
+            if(totalNumber < 0){
+                console.log("grather than 0");
+                obtainNumber
+
+            }
+            else{
+                console.log("grather  than 0");
+                
+            }
+
+    console.log(obtainNumber);
+  let result =   obtainNumber.value * 100 / totalNumber
+
+shownumber.innerHTML =   "Parantage  = "+ result + "%"
+
+if(result < 50 && result > 30){
+    showGrate.innerHTML = "B"
+}
+else if(result > 70){
+    showGrate.innerHTML = "A +"
+
+}
+else if(result < 30){
+    showGrate.innerHTML = "fail"
+}
+
+  return  result 
+}
+console.log(findPersantage());
+
+
+    </script>
+
+
+</body>
+</html>

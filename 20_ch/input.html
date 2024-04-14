@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="
+background-color: rgb(22, 22, 22);">
+
+        <input id="username" type="text" placeholder="username">
+        <input id="password" placeholder="password" type="text">
+<button class="btn" >login</button>
+
+
+    <script>
+
+
+document.querySelector('.btn').addEventListener('click',()=>{
+    let username  = document.getElementById('username').value
+let password  = document.getElementById('password').value
+let status = false;
+let userStatus = false
+let passwordStatus = false
+function cheakLogin(){
+ let symblos = '!@#$%^&*(){?}{<>~'
+    for(i = 0 ; i < username.length ; i++ ){
+    if(!symblos.includes(username[i]))
+    userStatus = true
+    }
+    if(userStatus){
+        console.log("welcome"+userStatus ,username);
+    }else{
+        console.log("remove symblos from username",username,userStatus);
+    }
+
+    let numbers = '0123456789'
+
+
+
+    if(password.length >= 5 ){
+        for(var i = 0 ; i < password.length ; i++){
+            if(numbers.includes(password[i])){
+                passwordStatus = true
+            }
+          
+        }
+        if(passwordStatus){
+ console.log("passwrod done ");
+        }else{
+            console.log('add number to make strong pass');
+        }
+
+    }else{
+        console.log('password should be grather than 6 val',password);
+    }
+if(passwordStatus && userStatus){
+    console.log('welocome', username);
+}else{
+    console.log('eroor');
+}
+}
+cheakLogin()
+})
+
+
+
+
+    </script>
+
+</body>
+</html>

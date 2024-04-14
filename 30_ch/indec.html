@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(31, 29, 29);">
+
+    <h1>input number between 1-10</h1>
+   <h2 class="show">see</h2>
+    <input type="number" id="usernumber">
+    <button class="btn">cheak</button>
+
+
+
+    
+
+    <script>
+        let btn = document.querySelector('.btn')
+        let show  = document.querySelector('.show')
+        let userNumber = document.getElementById('usernumber').value
+    
+        btn.addEventListener('click', () => {
+            let random = Math.floor(Math.random() * 10)
+            console.log(userNumber, random);
+            if (userNumber == random) {
+                console.log("congralted equal");
+                show.innerHTML = "you win !"
+            } else {
+                console.log("try again");
+            }
+        })
+
+
+    </script>
+
+</body>
+
+</html>

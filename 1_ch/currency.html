@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency exchanger</title>
+</head>
+<body style="background-color:black ;
+color: white;">
+    <h1>Doller   104$</h1>
+    <input type="text" placeholder="Doller">
+    <button 
+    >Change</button>
+    <h2 class="show">0</h2>
+<!-- age Collection -->
+
+<h1>Age collection</h1>
+<h2>Whrite the year you born</h2>
+<input type="number" id="age">
+<button onclick="ageCal()">
+Your age</button>
+<h3 class="showAge">0</h3>
+
+<h1>The life time Cal</h1>
+<h2>Input your perday meal</h2>
+
+    
+    <input type="number" id="snake" name="" id="">
+
+<button onclick="totalSnake()">Snake require</button>
+<h2 class="showSnake">you need <span>0</span>
+snake untial you get 65yers</h2>
+
+    <script>
+let input = document.querySelector("input").value
+
+let show =  document.querySelector(".show")
+
+let bun = document.querySelector("button")
+ bun.addEventListener("click",excahge)
+function excahge(){
+    let number  =  parseInt(input)
+  let total=   number *104
+  
+  console.log(total);
+  show.innerHTML = total
+ return total
+}
+
+let currentAge = 2024
+let inputage = document.querySelector("#age").value
+let showAge = document.querySelector(".showAge")
+function ageCal (){
+    let number = parseInt(inputage)
+  let result =   number - currentAge
+  console.log(result);
+  showAge.innerHTML = result
+}
+
+let oldAge = 65;
+let inputSnake = document.querySelector("#snake").value
+let showsnake = document.querySelector(".showSnake span")
+function totalSnake(){
+let number  = parseInt(inputSnake)
+let totalSnake = number *  23740
+showsnake =showsnake.innerHTML = totalSnake
+console.log(totalSnake);
+}
+
+
+    </script>
+
+</body>
+</html>

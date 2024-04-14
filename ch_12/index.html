@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" id="input1" name="" >
+<input type="text" id="input2" name="" >
+<button class="btn">See which on is larger</button>
+
+<div id="shownumber"></div>
+
+    
+
+    <script>
+let btn = document.querySelector(".btn")
+        let input1 = document.querySelector("#input1")
+        let input2 = document.querySelector("#input2")
+              let shownu = document.querySelector("#shownumber")
+     function  numberIdentifer(){
+       if(input1.value <input2.value){
+         return shownu.innerHTML = input2.value
+       }else if(input2.value < input1.value){
+        return shownu.innerHTML = input1.value
+       }else if(input1.value === input2.value){
+        return shownu.innerHTML = "this to are equal"
+       }
+
+     }
+
+
+btn.addEventListener("click",()=>
+{
+    numberIdentifer()
+    console.log(numberIdentifer());
+})
+
+    </script>
+    
+</body>
+</html>
