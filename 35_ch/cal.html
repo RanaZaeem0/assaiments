@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        height: 4rem;
+        width: 3rem;
+        background-color: blueviolet;
+      }
+      input {
+        font-size: 3rem;
+        height: 5rem;
+        width: 15vw;
+      }
+      input {
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="userinput" />
+    <div class="">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>*</button>
+    </div>
+    <div class="">
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>/</button>
+    </div>
+    <div class="">
+      <button>6</button>
+      <button>7</button>
+      <button>8</button>
+      <button>-</button>
+    </div>
+    <div class="">
+      <button>+</button>
+      <button>%</button>
+      <button>C</button>
+      <button>=</button>
+    </div>
+
+    <script>
+      let inputuser = document.getElementById("userinput");
+
+      let string = "";
+
+      let buttons = document.querySelectorAll("button");
+
+      Array.from(buttons).forEach((button) => {
+        button.addEventListener("click", (e) => {
+          if (e.currentTarget.innerHTML == "=") {
+            string = eval(string);
+            inputuser.value = string;
+          } else if (e.target.innerHTML == "C") {
+            string = ''
+            console.log(e.target);
+            inputuser.value = string;
+          } else {
+            console.log(string);
+            string = string + e.currentTarget.innerHTML;
+            inputuser.value = string;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

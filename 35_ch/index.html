@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(48, 47, 47);">
+
+    <button onclick="showDate()">Show Date</button>
+
+    <h2>user name</h2>
+    <input type="text" placeholder="username" id="username">
+    <input type="text" placeholder="lastname" id="lastname">
+    <button onclick="userAddName()"> login
+    </button>
+    <h2>Number adder</h2>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <button onclick="addNumber()">add number</button>
+
+    <h2>enter starting and ending number</h2>
+    <input type="number" id="startingNum">
+    <input type="number" id="endingNum">
+    <h3 class="show"></h3>
+    <button onclick="countingNumber()">start counting</button>
+
+    
+
+
+    <script>
+   
+
+   function showDate(){
+    return  alert(Date())
+   }
+  
+
+   function userAddName(){
+    let userName= document.getElementById('username').value
+    let lastname = document.getElementById('lastname').value
+
+    alert(`username : ${userName} ${lastname}`)
+
+   }
+
+   function  addNumber(){
+    let number1 = document.getElementById('number1').value
+    let number2 = document.getElementById('number2').value
+    if(number1 <= 0 &&  number2 <= 0){
+        alert('enter number please')
+    }
+  
+    else{
+        let result= Number(number1) + Number(number2)
+alert(result)
+    }
+ 
+   }
+
+
+function squareNum(){
+    let num = 3 
+    num * num 
+}
+
+function countingNumber()
+{
+    let startingNum  = document.getElementById('startingNum').value
+    let endingNum  = document.getElementById('endingNum').value
+ 
+    for(i = startingNum ; i < endingNum; i++){
+        console.log(i);
+    }
+
+
+}
+
+
+    </script>
+</body>
+</html>

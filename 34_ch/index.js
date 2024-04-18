@@ -78,9 +78,64 @@ let oldhours = startingDate /60 /60 /1000
 
 console.log("________________________");
 
-if(hours < 12){
-console.log("its am");  
+
+//                        09
+
+let laterDate =   Date.UTC(2015,5,29,12,13,12,1)
+
+//                        10 
+
+let randomCounter = new  Date(laterDate)
+
+let showDays = currentDate-  randomCounter
+// console.log("years : " ,currentDate.getFullYear()- randomCounter.getFullYear(),"moths: ",
+// currentDate.getMonth()- randomCounter.getMonth(), "day :",
+// currentDate.getDate() - randomCounter.getDate()
+
+// );
+let calMoths = Math.floor(showDays /(1000 * 60 * 60 * 24 * 30))
+calMoths %= 12
+let calYear  = Math.floor(showDays /(1000 * 60 * 60 * 24 * 30 * 12))
+let calday = Math.floor(showDays / (1000 * 60 * 60 * 24 ) ); calday %= 30
+
+
+// console.log(`year ${calYear} , ${monthNames[calMoths]}/${calday}`);
+
+
+//                                                        11
+
+let oneHourBackTime =  currentDate.getHours() -1 
+// console.log(oneHourBackTime);
+
+
+//                            12
+
+let userAge = 19
+function birthDay(){
+  let cheak = currentDate.getFullYear() - userAge
+  console.log("your birthday is ",cheak);
 }
-else{
-  console.log("ists pm");
+// birthDay()
+
+//                      14
+
+function eletricBill(){
+  let userName  = "sufan"
+  let currentMonth = monthNames[currentDate.getMonth()]
+  let perUnit = 34
+  let totalUnit  = 600
+  let latePay = 350
+  let totalPrice =  totalUnit * perUnit
+
+  console.log(`
+    UserName = ${userName}
+    Month = ${currentMonth}
+    PerUnit = ${perUnit}rs
+    totalUnit = ${totalUnit}
+    Latecharges  ${latePay}rs
+    totalPrice = ${totalPrice} rs
+  
+  `);
+
 }
+eletricBill()
