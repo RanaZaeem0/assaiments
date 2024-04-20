@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <button class="showText">Show text</button>
+
+    <h2>Statement 2</h2>
+    <div class="" style="display: flex; gap: 10px">
+      <div class="box">
+        <img
+          style="height: 100px"
+          src="../img/nike-just-do-it (4).jpg"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          style="height: 100px"
+          src="../img/nike-just-do-it (4).jpg"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          style="height: 100px"
+          src="../img/nike-just-do-it (4).jpg"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          style="height: 100px"
+          src="../img/nike-just-do-it (4).jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- <div class="students">
+      <div class="box1" style="display: flex">
+        <h4>1</h4>
+        <h4>zain</h4>
+        <h4>number : 223</h4>
+        <button data-id="zain" class="deleteBtn">Delete</button>
+      </div>
+      <div class="box2" style="display: flex">
+        <h4>1</h4>
+        <h4>sam</h4>
+        <h4>number : 223</h4>
+        <button data-id="sam" class="deleteBtn">Delete</button>
+      </div>
+      <div class="box3" style="display: flex">
+        <h4>1</h4>
+        <h4>khan</h4>
+        <h4>number : 223</h4>
+        <button data-id="khan" class="deleteBtn">Delete</button>
+      </div>
+    </div> -->
+
+
+<!--                                 secewt 3 -->
+<div id="student">
+
+</div>
+
+
+    <script>
+      document.querySelector(".showText").addEventListener("click", () => {
+        return alert(" How Are you");
+      });
+
+      //                   statement 2
+
+      document.querySelectorAll(".box").forEach((e) => {
+        e.addEventListener("click", () => {
+          alert(` thx for persching ${e.target}`);
+        });
+      });
+
+      //                                   statement 3
+
+      let Data = [
+        {
+          rollnum: 0,
+          name: "zain",
+          marks: 23,
+        },
+        {
+          rollnum: 0,
+          name: "sam",
+          marks: 80,
+        },
+        {
+          rollnum: 0,
+          name: "khan",
+          marks: 23,
+        },
+      ];
+let student = document.querySelector('#student')
+
+
+let box1 = document.querySelector(".box1");
+      let box2 = document.querySelector(".box2");
+      let box3 = document.querySelector(".box3");
+
+let deleteBtn = document.querySelectorAll(".deleteBtn");
+function studentdeleters(){
+
+    const items = Data.map((e)=>{
+    return `
+    <div class="box1" style="display: flex">
+        <h4></h4>
+        <h4>${e.name}</h4>
+        <h4>number : 223</h4>
+        <button data-id="${e.name}" class="deleteBtn">Delete</button>
+      </div>
+    
+    `
+})
+
+items.forEach( (e) =>{
+    // console.log(e);
+    student.innerHTML = items.join('')
+    // student.appendChild(e)
+})
+
+}
+
+
+
+studentdeleters()
+// student.appendChild(items)
+// console.log(items);
+  
+
+      function deleteStudent() {
+        deleteBtn.forEach((e) => {
+          let dataID = e.getAttribute("data-id");
+          e.addEventListener("click", () => {
+            if (dataID == "zain") {
+              box1.remove();
+            } else if (dataID == "zain") {
+              box1.remove();
+            } else if (dataID == "zain") {
+              box1.remove();
+            }
+          });
+        });
+      }
+
+    //   deleteStudent();
+    </script>
+  </body>
+</html>
